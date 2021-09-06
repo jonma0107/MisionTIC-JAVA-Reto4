@@ -1,8 +1,8 @@
 * Reto # 4 - MisionTIC JAVA
-** RETO Luber
-Camila y Carlos tienen una flotilla de taxis y autos, pero debido a la pandemia sus conductores le han pedido que disminuya el valor de las entregas, pues los viajes se han reducido, esto lo nota pues el incremento del kilometraje de los vehículos se. Ellos piensan en una forma más útil de hacerlo y piensa en crear una aplicación para que le paguen un porcentaje por cada viaje que realicen en lugar de una entrega.
+** Reto Luber
+Camila y Carlos tienen una flotilla de taxis y autos, pero debido a la pandemia sus conductores les han pedido que disminuyan el valor de las entregas, pues los viajes se han reducido, esto se nota en el incremento del kilometraje de los vehículos. Ellos piensan en una forma más útil de hacerlo y piensan en crear una aplicación para que les paguen un porcentaje por cada viaje que realicen en lugar de una entrega.
 
-Para esto necesita una aplicación que lleve el registro de los conductores, vehículos, usuarios y viajes. Se desea almacenar la información del documento, nombre, apellidos y email de los conductores y usuarios. Un conductor sólo puede conducir un vehículo y un vehículo puede ser conducido por varios conductores. Un usuario puede tomar varios viajes. Un conductor puede realizar varios viajes. De los viajes se desea guardar el origen, el destino y la fecha. Los viajes son realizados por conductores y tomados por los usuarios. Del vehículo se pretende guardar la placa del vehículo la cual es única, su marca, modelo, año, capacidad, color y kilometraje. Algunos usuarios registrados como conductores pueden ser usuarios del servicio. Los conductores tienen turno (dia o noche).
+Para esto se necesita una aplicación que lleve el registro de los conductores, vehículos, usuarios y viajes. Se desea almacenar la información del documento de identidad, nombres, apellidos y el email de los conductores y usuarios. Un conductor sólo puede conducir un vehículo y un vehículo puede ser conducido por varios conductores. Un usuario puede tomar varios viajes. Un conductor puede realizar varios viajes. De los viajes se desea guardar el origen, el destino y la fecha. Los viajes son realizados por conductores y tomados por los usuarios. Del vehículo se pretende guardar la placa del vehículo la cual es única, su marca, modelo, año, capacidad, color y kilometraje. Algunos usuarios registrados como conductores pueden ser usuarios del servicio. Los conductores tienen turno (dia o noche).
 
 Por ahora, los socios de este emprendimiento, Camila y Carlos, quieren que usted construya un modelo de datos que permita almacenar y consultar de manera eficiente toda la información necesaria para el funcionamiento de Luber. 
 
@@ -14,7 +14,7 @@ Esto quiere decir que usted debe construir:
 
 *** 1. Crear los siguientes Vehiculos (exactamente):
 
-* VEHICULOS*
+*VEHICULOS*
 
 #+BEGIN_SRC
 KLM 565:
@@ -71,20 +71,20 @@ kilometros: 130.000
 *USUARIOS*
 
 #+BEGIN_SRC
-Camilo Garcia          con cc      454671556        cgarcia@mail.com
-Ana Riascos            con cc      65448733         ariascos@mail.com
-Pedro Perez           con cc      35448452 	      pperez@mail.com
-Maria Lopez            con cc      325555451        mlopez@mail.com
-Nelson Ruiz            con cc       76636633         nruiz@mail.com
-Ana Lopez              con cc       64588522         alopez@mail.com
-Carlos Penagos      con cc       65544788         cpenagos@mail.com
-Fredy Bustos          con cc       987445125       fbustos@mail.com
-Viviana Henao         con cc      55987784         vhenao@mail.com
-Claudia Mendez      con cc      4548844           cmendez@mail.com
-Andres Cruz            con cc      55844775         acruz@mail.com
-Luis Rojas               con  cc     55488445         lrojas@mail.com
-Jorge Rodriguez     con cc      987367363        jrodriguez@mail.com
-Paola Angulo          con cc      5584669           pangulo@mail.com
+Camilo Garcia  con cc 454671556 con cgarcia@mail.com
+Ana Riascos  con cc 65448733 con ariascos@mail.com
+Pedro Perez  con cc 35448452 con pperez@mail.com
+Maria Lopez  con cc 325555451 mlopez@mail.com
+Nelson Ruiz  con cc 76636633 nruiz@mail.com
+Ana Lopez  con cc 64588522 alopez@mail.com
+Carlos Penagos  con cc 65544788 cpenagos@mail.com
+Fredy Bustos  con cc 987445125 fbustos@mail.com
+Viviana Henao  con cc 55987784 vhenao@mail.com
+Claudia Mendez  con cc 4548844 cmendez@mail.com
+Andres Cruz  con cc 55844775 acruz@mail.com
+Luis Rojas  con  cc 55488445 lrojas@mail.com
+Jorge Rodriguez  con cc 987367363 jrodriguez@mail.com
+Paola Angulo  con cc 5584669 pangulo@mail.com
 #+END_SRC
 
 *** 3. Asignar los vehiculos a los conductores (exactamante):
@@ -122,7 +122,7 @@ Jorge Rodriguez conduce KGH 211
 "Nelson Ruiz", viajó con "Jorge Rodriguez" el '2020-03-17 18:30:20'
 #+END_SRC
 
-*** NOTA: Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
+*NOTA:* Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
 
 *Ejemplo:* Para crear la tabla director se debe crear el siguiente script:
 
@@ -142,21 +142,25 @@ insert into usuario values (105, "Vincent", "Ward", "ward@mail.com");
 
 *Nota:* No deje líneas en blanco antes del create
 
-*** 4. Código SQL para Modificar  los siguientes datos:
-*** 4.1 Cambiar el color del carro "KGH 211" por azul
-*** 4.2 Cambiar el email del usuario "Andres Cruz" por acruz@example.com
-*** 4.3 Borrar el viaje de "Luis Rojas" con "Ana Lopez"
+#+BEGIN_SRC
+4. Código SQL para Modificar  los siguientes datos:
+4.1 Cambiar el color del carro "KGH 211" por ***azul***
+4.2 Cambiar el email del usuario ***"Andres Cruz"*** por ***acruz@example.com***
+4.3 Borrar el viaje de ***"Luis Rojas"*** con ***"Ana Lopez"***
+#+END_SRC
 
 *Nota:* Generar un archivo script sql para las modificaciones y borrados
 
-*** 5. Código SQL para realizar las siguientes consultas:
-*** 5.1 Mostrar la información de los usuarios ordernados por número de cédula.
-*** 5.2 Mostrar la información de los vehiculos (placa, marca, modelo) matriculados después del 2015, ordenados por marca.
-*** 5.3 Mostrar la información de los conductores del vehículo con placa PET 363
-*** 5.4 Mostrar la información de los vehiculos ( solo la placa) en los que ha viajado el usuario con cc 64588522
-*** 5.5 Mostrar cuantos vehículos tienen más de 120000 kilometros
+#+BEGIN_SRC
+5. Código SQL para realizar las siguientes consultas:
+5.1 Mostrar la información de los usuarios ordernados por número de cédula.
+5.2 Mostrar la información de los vehiculos (placa, marca, modelo) matriculados después del =2015=, ordenados por marca.
+5.3 Mostrar la información de los conductores del vehículo con placa PET 363
+5.4 Mostrar la información de los vehiculos ( solo la placa) en los que ha viajado el usuario con cc =64588522=
+5.5 Mostrar cuantos vehículos tienen más de =120000= kilometros
+#+END_SRC
 
-*NOTA:* Generar un archivo script sql para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
+*Nota:* Generar un archivo script ***sql*** para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
 
 *Ejemplo:*
 
