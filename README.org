@@ -122,7 +122,7 @@ Jorge Rodriguez conduce KGH 211
 "Nelson Ruiz", viajó con "Jorge Rodriguez" el '2020-03-17 18:30:20'
 #+END_SRC
 
-*NOTA:* Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
+*Nota* Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
 
 *Ejemplo:* Para crear la tabla director se debe crear el siguiente script:
 
@@ -144,9 +144,9 @@ insert into usuario values (105, "Vincent", "Ward", "ward@mail.com");
 
 #+BEGIN_SRC
 4. Código SQL para Modificar  los siguientes datos:
-4.1 Cambiar el color del carro "KGH 211" por ***azul***
-4.2 Cambiar el email del usuario ***"Andres Cruz"*** por ***acruz@example.com***
-4.3 Borrar el viaje de ***"Luis Rojas"*** con ***"Ana Lopez"***
+4.1 Cambiar el color del carro "KGH 211" por =azul=
+4.2 Cambiar el email del usuario =Andres Cruz= por =acruz@example.com=
+4.3 Borrar el viaje de =Luis Rojas= con =Ana Lopez=.
 #+END_SRC
 
 *Nota:* Generar un archivo script sql para las modificaciones y borrados
@@ -154,13 +154,13 @@ insert into usuario values (105, "Vincent", "Ward", "ward@mail.com");
 #+BEGIN_SRC
 5. Código SQL para realizar las siguientes consultas:
 5.1 Mostrar la información de los usuarios ordernados por número de cédula.
-5.2 Mostrar la información de los vehiculos (placa, marca, modelo) matriculados después del =2015=, ordenados por marca.
-5.3 Mostrar la información de los conductores del vehículo con placa PET 363
-5.4 Mostrar la información de los vehiculos ( solo la placa) en los que ha viajado el usuario con cc =64588522=
-5.5 Mostrar cuantos vehículos tienen más de =120000= kilometros
+5.2 Mostrar la información de los vehiculos (placa, marca, modelo) matriculados después del 2015, ordenados por marca.
+5.3 Mostrar la información de los conductores del vehículo con placa PET 363.
+5.4 Mostrar la información de los vehiculos ( solo la placa) en los que ha viajado el usuario con cc 64588522.
+5.5 Mostrar cuantos vehículos tienen más de 120000 kilometros.
 #+END_SRC
 
-*Nota:* Generar un archivo script ***sql*** para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
+*Nota:* Generar un archivo script =sql= para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
 
 *Ejemplo:*
 
