@@ -1,43 +1,171 @@
-* Reto #2 - MisionTIC JAVA
-** Descripción
-Para el congreso nacional de computación se necesita un software que
-registre todos los participantes.
+* Reto # 4 - MisionTIC JAVA
+** RETO LUber
+Camila y Carlos tienen una flotilla de taxis y autos, pero debido a la pandemia sus conductores le han pedido que disminuya el valor de las entregas, pues los viajes se han reducido, esto lo nota pues el incremento del kilometraje de los vehículos se. Ellos piensan en una forma más útil de hacerlo y piensa en crear una aplicación para que le paguen un porcentaje por cada viaje que realicen en lugar de una entrega.
 
-Principalmente los asistentes que han pagado el ticket y los
-conferencistas. Se debe registrar: =nombre=, =apellido=, =documento=,
-=especialidad=, =empresa=. Para los conferencistas debe registrar la
-=horaCharla= y para los asistentes el =nro_ticket=.
+Para esto necesita una aplicación que lleve el registro de los conductores, vehículos, usuarios y viajes. Se desea almacenar la información del documento, nombre, apellidos y email de los conductores y usuarios. Un conductor sólo puede conducir un vehículo y un vehículo puede ser conducido por varios conductores. Un usuario puede tomar varios viajes. Un conductor puede realizar varios viajes. De los viajes se desea guardar el origen, el destino y la fecha. Los viajes son realizados por conductores y tomados por los usuarios. Del vehículo se pretende guardar la placa del vehículo la cual es única, su marca, modelo, año, capacidad, color y kilometraje. Algunos usuarios registrados como conductores pueden ser usuarios del servicio. Los conductores tienen turno (dia o noche)
 
-Utilice la especificación del siguiente diagrama de clases para este
-reto:
-[[https://i.ibb.co/1mYJgj5/image.png]]
+Por ahora, los socios de este emprendimiento, Camila y Carlos, quieren que usted construya un modelo de datos que permita almacenar y consultar de manera eficiente toda la información necesaria para el funcionamiento de Luber. Esto quiere decir que usted debe construir:
 
-** A tener en cuenta
-En la clase Congreso, se debe definir la función procesar comandos que
-realiza las siguientes operaciones:
-*** Agregar participantes: Opción 1
-Se puede añadir un conferencista con el siguiente comando:
-#+BEGIN_SRC
-1;Conferencista;nombre;especialidad;documento;empresa;horaCharla
-#+END_SRC
+[[https://i.ibb.co/gS77LqW/entidad-relacion.png]]
+
+*** Código SQL para generar dichas tablas, e inserción de datos:
+
+*** 1 Crear los siguientes Vehiculos (exactamente):
+
+* VEHICULOS*
+
+KLM 565:
+Marca: Chevrolet
+Modelo: spark
+Año: 2015
+capacidad: 5
+color: amarillo
+kilometros: 120.000
+
+LCS 364:
+Marca: Chevrolet
+Modelo: spark
+Año: 2016
+capacidad: 5
+color: blanco
+kilometros: 125.000
+
+KGH 211:
+Marca: Kia
+Modelo: picanto
+Año: 2015
+capacidad: 5
+color: amarillo
+kilometros: 80.000
+
+PET 363:
+Marca: Kia
+Modelo: rio
+Año: 2019
+capacidad: 5
+color: blanco
+kilometros: 150.000
+
+CUL 073:
+Marca: Renault
+Modelo: duster
+Año: 2006
+capacidad: 5
+color: blanco
+kilometros: 220.000
+
+PEL 456:
+Marca: Renault
+Modelo: duster
+Año: 2015
+capacidad: 5
+color: blanco
+kilometros: 130.000
+
+*** 2. Crear las siguientes Usuarios (exactamente):
+
+*USUARIOS*
+
+Camilo Garcia          con cc      454671556        cgarcia@mail.com
+Ana Riascos            con cc      65448733         ariascos@mail.com
+Pedro Perez           con cc      35448452 	      pperez@mail.com
+Maria Lopez            con cc      325555451        mlopez@mail.com
+Nelson Ruiz            con cc       76636633         nruiz@mail.com
+Ana Lopez              con cc       64588522         alopez@mail.com
+Carlos Penagos      con cc       65544788         cpenagos@mail.com
+Fredy Bustos          con cc       987445125       fbustos@mail.com
+Viviana Henao         con cc      55987784         vhenao@mail.com
+Claudia Mendez      con cc      4548844           cmendez@mail.com
+Andres Cruz            con cc      55844775         acruz@mail.com
+Luis Rojas               con  cc     55488445         lrojas@mail.com
+Jorge Rodriguez     con cc      987367363        jrodriguez@mail.com
+Paola Angulo          con cc      5584669           pangulo@mail.com
+
+*** 3. Asignar los vehiculos a los conductores (exactamante):
+
+Claudia Mendez  conduce KLM 565
+Maria Lopez conduce KLM 565
+Nelson Ruiz conduce LCS 364
+Ana Lopez conduce PET 363
+Carlos Penagos conduce PET 363
+Andres Cruz conduce LCS 364
+Luis Rojas conduce KGH 211
+Jorge Rodriguez conduce KGH 211
+
+*** 4. Registrar las siguientes viajes de los siguientes usuarios:
+"Ana Riascos", viajó con "Claudia Mendez" el '2017-10-25 20:00:00'
+"Ana Riascos", viajó con "Maria Lopez" el '2019-03-15 18:30:00'
+"Ana Riascos", viajó con "Andres Cruz" el '2019-05-20 20:30:00’
+"Pedro Perez", viajó con "Claudia Mendez" el '2018-05-20 20:30:00'
+"Pedro Perez", viajó con "Andres Cruz" el '2020-01-20 20:30:00'
+"Maria Lopez", viajó con "Ana Lopez" el '2019-05-20 20:30:00'
+"Maria Lopez", viajó con "Carlos Penagos" el '2018-06-22 21:30:00'
+"Maria Lopez", viajó con "Luis Rojas" el '2020-03-17 15:30:20'
+"Ana Lopez", viajó con "Luis Rojas" el '2020-03-17 15:30:20'
+"Ana Lopez", viajó con "Nelson Ruiz" el '2020-04-10 18:30:20'
+"Luis Rojas", viajó con "Jorge Rodriguez" el '2020-02-17 20:30:20'
+"Luis Rojas", viajó con "Andres Cruz" el '2020-02-20 16:30:20'
+"Luis Rojas", viajó con "Ana Lopez" el '2020-03-27 18:30:20'
+"Andres Cruz", viajó con "Ana Lopez" el '2020-03-20 21:30:20'
+"Nelson Ruiz", viajó con "Ana Lopez" el '2020-01-10 17:30:20'
+"Nelson Ruiz", viajó con "Maria Lopez" el '2020-02-15 20:30:20'
+"Nelson Ruiz", viajó con "Jorge Rodriguez" el '2020-03-17 18:30:20'
+
+*NOTA: Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)*
+
+Ejemplo: Para crear la tabla director se debe crear el siguiente script:
+
+create table usuario(
+    usu_cc  int primary key,
+    usu_nombre  char(20),
+    usu_apellido char(20),
+    usu_email  char(60)
+);
+insert into usuario values (101, "Hayo","Miyazaki", "miya@mail.com");
+insert into usuario values (102, "Joss", "Whedon", "joss@mail.com");
+insert into usuario values (103, "Chris", "Nolan",”nolan@mail.com");
+insert into usuario values (104, "Bong", "Joon-ho", "bong@mail.com");
+insert into usuario values (105, "Vincent", "Ward", "ward@mail.com");
+
+*Nota: No deje líneas en blanco antes del create*
+
+4. Código SQL para Modificar  los siguientes datos:
+
+4.1 Cambiar el color del carro "KGH 211" por azul
+
+4.2 Cambiar el email del usuario "Andres Cruz" por acruz@example.com
+
+4.3 Borrar el viaje de "Luis Rojas" con "Ana Lopez"
+
+*NOTA: Generar un archivo script sql para las modificaciones y borrados*
+
+*** 5. Código SQL para realizar las siguientes consultas:
+5.1 Mostrar la información de los usuarios ordernados por número de cédula.
+5.2 Mostrar la información de los vehiculos (placa, marca, modelo) matriculados después del 2015, ordenados por marca.
+5.3 Mostrar la información de los conductores del vehículo con placa PET 363
+5.4 Mostrar la información de los vehiculos ( solo la placa) en los que ha viajado el usuario con cc 64588522
+5.5 Mostrar cuantos vehículos tienen más de 120000 kilometros
+
+*NOTA: Generar un archivo script sql para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.*
 
 *Ejemplo:*
-#+BEGIN_SRC
-1;Conferencista;Carlos Perez;Machine Learning;34442222;Google Inc;1400
-#+END_SRC
 
-Se puede añadir un asistente con el siguiente comando:
+Select 'Consulta 1';
+Select titulo from ....;
+Select 'Consulta 2';
+Select .....;
+Select 'Consulta 3';
+Select .....;
 
-#+BEGIN_SRC
-1;Asistente;nombre;especialidad;documento;empresa;nroTicket
-#+END_SRc
+*ENTREGA*
 
-*Ejemplo:*
-#+BEGIN_SRC
-1;Asistente;Pepito Perez;Estudiante;334221111;Universidad Nacional;5545878
-#+END_SRC
+Para la entrega es necesario:
 
-*** Listar ítems del inventario: Opción 2
+1. Subir cada uno de los archivos .sql en orden de ejecución. Es decir, primero se suben las tablas que no tienen Referencias (Llaves foráneas) y luego las demás. 
+2. Luego de subir los scripts de sql de creación e inserción de datos, se debe subir el de actualizaciones y por último el de consultas. 
+3. Luego se evalúa, igual que con los retos anteriores. Si todo esta correcto, tanto las inserciones, coo las modificaciones y las consultas, se obtendrá una nota de 5/5. Si hay un error la evaluación será 0. Por lo que será necesario que revisen hasta que las salidas sean las correctas
+
+
 Se debe mostrar la frase "=*** Participantes Congreso ***=" seguida
 por los participantes en el orden en el que fueron agregados.
 
