@@ -122,7 +122,7 @@ Jorge Rodriguez conduce KGH 211
 "Nelson Ruiz", viajó con "Jorge Rodriguez" el '2020-03-17 18:30:20'
 #+END_SRC
 
-*Nota* Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
+*Nota:* Para la creación de cada una de las tablas e inserción de datos generar un script de sql =(Un script por cada tabla)=.
 
 *Ejemplo:* Para crear la tabla director se debe crear el siguiente script:
 
